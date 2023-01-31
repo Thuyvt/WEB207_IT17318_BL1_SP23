@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row grid-demo">
+            <!-- HEADER -->
+            <div class="col-md-12 col-lg-12">
+                <header>
+                    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+                        <!-- Brand -->
+                        <a class="navbar-brand" href="#">Logo</a>
+                      
+                        <!-- Links -->
+                        <ul class="navbar-nav">
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Link 1</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Link 2</a>
+                          </li>
+                      
+                          <!-- Dropdown -->
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                              Dropdown link
+                            </a>
+                            <div class="dropdown-menu">
+                              <a class="dropdown-item" href="#">Link 1</a>
+                              <a class="dropdown-item" href="#">Link 2</a>
+                              <a class="dropdown-item" href="#">Link 3</a>
+                            </div>
+                          </li>
+                        </ul>
+                      </nav>
+                </header>
+            </div>
+            <!-- MAIN CONTENT -->
+            <div class="col-md-3 col-lg-3">
+                <section> Bên trái 3 cột</section>
+            </div>
+            <div class="col-md-6 col-lg-6">
+                <article>
+                    <div class="col-md-4 product">
+                        <!-- NỘI DUNG SẢN PHẨM -->
+                        <!-- TÊN, HÌNH ẢNH, GIÁ -->
+                    </div>
+                </article>
+            </div>
+            <div class="col-md-3 col-lg-3">
+                <aside>
+                    <!-- Thông tin giỏ hàng -->
+                    <div class="cart">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <img class="col-md-3" alt="" src="img/41Ew7cHiAQL._SX425_.jpg"/>
+                                <ul class="col-md-9">
+                                    <li>54 Sản phẩm</li>
+                                    <li>4.501.123 VNĐ</li>
+                                    <li><a href="">Xem chi tiết</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tìm kiếm sản phẩm -->
+                    <form action="" class="d-flex">
+                        <input type="search" class="form-control" placeholder="Tìm kiếm sản phẩm" aria-label="Tìm kiếm">
+                        <button class="btn btn-outline-success" type="submit">Tìm</button>
+                    </form>
+                    <!-- Danh mục sản phẩm -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fas fa-bars"></i>
+                            <span>Danh mục sản phẩm</span>
+                        </div>
+                        <div class="list-group">
+                            <a href="" class="list-group-item">Trà sữa</a>
+                            <a href="" class="list-group-item">Bánh tráng</a>
+                            <a href="" class="list-group-item">Xiên bẩn</a>
+                            <a href="" class="list-group-item">Bánh mì</a>
+                            <a href="" class="list-group-item">Phở</a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+            <!-- FOOTER -->
+            <div class="col-md-6 col-lg-6">
+                <footer> Footer trái 6 cột</footer>
+            </div>
+            <div class="col-md-6 col-lg-6">
+                <footer> Footer phải 6 cột</footer>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
