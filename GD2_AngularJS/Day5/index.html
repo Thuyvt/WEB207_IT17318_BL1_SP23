@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Nhúng file -->
+    <script language="javascript" src="angular.min.js"></script>
+</head>
+<body>
+    <!-- Ứng dụng Angular trên file html -->
+    <div ng-app="demo1">
+        <!-- Nhóm tính năng headerController -->
+        <div ng-controller="headerController">
+            {{title}} <br>
+            <h2>{{title}} xin chào các bạn</h2>
+            {{data.name}} năm nay {{data.age}} tuổi <br>
+            <h2>SẢN PHẨM</h2>
+            <ul>
+                <li>{{arr[0]}}</li>
+                <li>{{arr[1]}}</li>
+                <li>{{arr[2]}}</li>
+            </ul>
+        </div>
+        <!-- HẾT headerController -->
+        <!-- Nhóm chức năng mainController -->
+        <div ng-controller="mainController">
+            {{data.name}} có số lượng là {{data.num}}
+        </div>
+    </div>
+    <script>
+        // Khai báo ứng dụng angular tên demo1
+        angular.module("demo1",[])
+        // Khai báo controller - tương đương các nhóm tính năng có trong app
+        .controller("headerController", function($scope) {
+            $scope.title = 'Trà sữa H2T';
+            // Khai báo đối tượng
+            $scope.data = {
+                name: 'Vũ Thị Thúy',
+                age: 30
+            };
+            $scope.arr = ['Trà sữa mochi kéo dài', 'Trà sữa nướng', 'Trà sữa 3Q'];
+        })
+        // kết thúc controller headerController
+        .controller("mainController", function($scope) {
+            $scope.data = {
+                name: 'Sản phẩm bán chạy',
+                num: 24
+            }
+        })
+    </script>
+</body>
+</html>
