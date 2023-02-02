@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body ng-app="myApp">
+    <!-- Nhúng code trang header -->
+    <nav ng-include="'layout/header.html'"></nav>
+    <!-- Nhúng phần nội dung thay đổi -->
+    <div ng-view></div>
+    <!-- Nhúng code trang footer -->
+    <footer ng-include="'layout/footer.html'"></footer>
+    <!-- Gọi thư viện angular -->
+    <script src="../lib/angular.js"></script>
+    <!-- Để sử dụng SPA của angular js : dùng thư router -->
+    <script src="../lib/angular-route.js"></script>
+    <!-- Khai báo file chứa controller trước khi khai báo file route -->
+    <script src="../js/gioi-thieu.js"></script>
+    <script src="route.js"></script> 
+</body>
+</html>

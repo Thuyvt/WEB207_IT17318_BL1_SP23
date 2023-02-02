@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myModule">
+    <!-- ng-app: đăng ký 1 modulde với angularjs có tên là myModule -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body ng-controller="myController">
+    <!-- ng-controller: là 1 tính năng trong app đã đăng ký -->
+    <h1>{{message}}</h1>
+    <p>{{mangObject[0].firstName}}</p>
+    <input type="text" ng-model="number1"/>
+    <input type="text" ng-model="number2"/>
+    <button ng-click="sum();"> sum </button>
+    <input type="text" ng-model="finalSum"></label>
+    <script src="../../lib/angular.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

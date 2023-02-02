@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    margin-top: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+section {
+    margin-top: 5px;
+}
+
+article {
+    margin-top: 5px;
+    line-height: 250px;
+}
+
+aside {
+    margin-top: 5px;
+}
+.cart {
+    margin-top: 5px;
+}
+.cart ul{
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+
+footer {
+    /* background: blue; */
+    margin-top: 5px;
+    height: 30px;
+    /* line-height: 30px; */
+    /* color: white; */
+    font-weight: bold;
+    /* font-size: 32px; */
+    text-align: center;
+}
