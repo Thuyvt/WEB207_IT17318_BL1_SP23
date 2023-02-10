@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body ng-app="JsonServerDemo">
+    <table ng-controller="listProduct">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Tên</th>
+                <th>Giá</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="p in products">
+                <td>{{p.id}}</td>
+                <td>{{p.ten}}</td>
+                <td>{{p.gia}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="../../lib/angular.js"></script>
+    <script>
+        var app = angular.module("JsonServerDemo", []);
+        // đăng ký controller
+        app.controller("listProduct", function($scope, $http) {
+            // tạo biến hứng danh sách lấy về từ api sanpham
+            $scope.products = [];
+            const apiProductUrl = "http://localhost:3000/sanpham";
+            // Gửi yêu cầu để lấy danh sách
+            $http
+            .get(apiProductUrl)// request dạng get để đọc dữ liệu
+            .then(function (response) {// sau khi get dữ liệu, xử lý dữ liệu trả về
+                $scope.products = response.data;
+            })
+            .catch(function (error) {
+                console.log(error);
+            })
+        });
+    </script>
+</body>
+</html>

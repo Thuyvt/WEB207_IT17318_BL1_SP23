@@ -1,0 +1,14 @@
+{   
+    "sanpham" : [
+        {"id": 1, "ten": "Sản phẩm 1", "gia": 10000},
+        {"id": 2, "ten": "Sản phẩm 2", "gia": 10000},
+        {"id": 3, "ten": "Sản phẩm 3", "gia": 10000}
+    ],
+    "danhMuc" : [
+        {"id": 1, "ten": "Áo nam"},
+        {"id": 2, "ten": "Áo nữ"}
+    ],
+    "gioHang" : [
+        {"id": 1, "userId": 1, "sanPhamId": 1, "soLuong": 10}
+    ]
+}
