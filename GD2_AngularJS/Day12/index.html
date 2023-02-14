@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEMO CRUD PRODUCT</title>
+</head>
+<body ng-app="demo_product">
+    <div ng-controller="myCtrl">
+        <!-- DANH SÁCH SẢN PHẨM -->
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Ten</th>
+                    <th>Số lượng</th>
+                    <th>Giá nhập</th>
+                    <th>Giá bán</th>
+                    <th>Mô tả</th>
+                    <th>Sửa</th>
+                    <th>Xóa</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="product in products">
+                    <td>{{product.id}}</td>
+                    <td>{{product.ten}}</td>
+                    <td>{{product.so_luong}}</td>
+                    <td>{{product.gia_nhap}}</td>
+                    <td>{{product.gia_ban}}</td>
+                    <td>{{product.mo_ta}}</td>
+                    <td>
+                        <button>Sửa</button>
+                    </td>
+                    <td>
+                        <button ng-click="delete($index)">Xóa</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="../../lib/angular.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

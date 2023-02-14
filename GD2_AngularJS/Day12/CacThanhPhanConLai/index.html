@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body ng-controller="myController">
+    <!-- 1. Ng-model
+        Sử dụng để ràng buộc dữ liệu với các input
+        Ng-model sẽ thực hiện ràng buộc 2 chiều(two way binding)
+          + Chiều 1: Lấy dữ liệu từ $scope và hiển thị lên view(giao diện)
+          + Chiều 2: Lấy dữ liệu từ người dùng nhập vào trên giao diện
+          (input) và cập nhập vào trong $scope
+        2.ng-options 
+        - Cũng có thể lặp
+        Khi dùng ng-repeat => value auto là text 
+        Khi dung ng-options => value có thể là Object, tẽt....
+        -->
+    <!-- <input type="text" ng-model="user.firstName" />
+    {{user.firstName}} -->
+    <!-- {{u}}
+    <select ng-model="u">
+      <option ng-repeat="user in users" value="{{user.id}}">
+        {{user.name}}
+      </option>
+    </select> -->
+    <!-- {{u1}}
+    <select ng-model="u1" ng-options="x.name for x in users"></select> -->
+
+    <!-- 3.Checkbox -->
+    <!-- <div>
+      <input type="checkbox" ng-model="all" />CheckAll<br />
+      <input type="checkbox" ng-checked="all" ng-model="1" />1<br />
+      <input type="checkbox" ng-checked="all" ng-model="2" />2<br />
+      <input type="checkbox" ng-checked="all" ng-model="3" />3<br />
+    </div> -->
+    <!-- 4.Form  -->
+    <!-- Loi angular sp -->
+    <!-- <form name="myForm">
+      <label>FullName</label>
+      <input type="text" name="txtName" ng-model="fullName" required />
+      <br />
+      <label>Email</label>
+      <input type="email" name="txtEmail" ng-model="email" required />
+      <br />
+    </form>
+    <h3>Tinh trang loi</h3>
+    <ul>
+      <li>FullName:{{myForm.txtName.$valid}}</li>
+      <li>Email:{{myForm.txtEmail.$valid}}</li>
+    </ul>
+    <h3>{{myForm.$valid}}</h3> -->
+    <!-- Custom loi -->
+    <form name="newForm">
+      <input
+        type="password"
+        ng-model="password"
+        name="password"
+        check-password
+        required
+      />
+      <div
+        ng-hide="newForm.password.$untouched || newForm.password.$valid"
+        class="text-danger"
+      >
+        <small ng-show="newForm.password.$error.check_length_pwd">
+          Tối thiểu 6 kí tự
+        </small>
+      </div>
+    </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
