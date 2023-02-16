@@ -31,7 +31,7 @@
                     <td>{{product.gia_ban}}</td>
                     <td>{{product.mo_ta}}</td>
                     <td>
-                        <button>Sửa</button>
+                        <button ng-click="selectProduct($index)">Sửa</button>
                     </td>
                     <td>
                         <button ng-click="delete($index)">Xóa</button>
@@ -39,6 +39,33 @@
                 </tr>
             </tbody>
         </table>
+        <!-- FORM Sửa thông tin sản phẩm-->
+        <form id="form_product" ng-submit="onSubmit($event)">
+            <input type="text" value="{{product.id}}" ng-model="product.id" style="display: none"/>
+            <label>Tên sản phẩm: </label>
+            <input type="text" class="form-control" id="ten" ng-model="product.ten" value="{{product.ten}}">
+            <br/>
+            <!-- SỐ LƯỢNG -->
+            <label>Số lượng sản phẩm: </label>
+            <input type="text" class="form-control" id="soLuong" ng-model="product.so_luong" value="{{product.so_luong}}">
+            <br/>
+            <!-- Gia nhập -->
+            <label>Giá nhập sản phẩm: </label>
+            <input type="text" class="form-control" id="giaNhap" ng-model="product.gia_nhap" value="{{product.gia_nhap}}">
+            <br/>
+            <!-- Giá bán -->
+            <label>Giá bán sản phẩm: </label>
+            <input type="text" class="form-control" id="giaBan" ng-model="product.gia_ban" value="{{product.gia_ban}}">
+            <br/>
+            <!-- Mô tả -->
+            <label>Mô tả sản phẩm: </label>
+            <input type="text" class="form-control" id="moTa" ng-model="product.mo_ta" value="{{product.mo_ta}}">
+            <div>
+                <!-- Thêm nút phải có submit -->
+                <button type="submit">Thêm</button>
+                <button type="submit">Sửa</button>
+            </div>
+        </form>
     </div>
     <script src="../../lib/angular.js"></script>
     <script src="index.js"></script>

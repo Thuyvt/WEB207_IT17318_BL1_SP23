@@ -2,31 +2,43 @@
   "sanpham": [
     {
       "id": 1,
-      "ten": "abc",
-      "giaNhap": 90,
-      "giaBan": 100,
-      "soLuong": 10
+      "ten": "123",
+      "gia_nhap": 90,
+      "gia_ban": 100,
+      "so_luong": 10,
+      "mo_ta": "Abc"
     },
     {
       "id": 2,
-      "ten": "abc",
-      "giaNhap": 90,
-      "giaBan": 100,
-      "soLuong": 10
+      "ten": "456",
+      "gia_nhap": 90,
+      "gia_ban": 100,
+      "so_luong": 10,
+      "mo_ta": "Abc"
     },
     {
       "id": 3,
       "ten": "abc",
-      "giaNhap": 90,
-      "giaBan": 100,
-      "soLuong": 10
+      "gia_nhap": "99",
+      "gia_ban": 100,
+      "so_luong": 10,
+      "mo_ta": "Abc"
     },
     {
       "id": 4,
       "ten": "abc",
-      "giaNhap": 90,
-      "giaBan": 100,
-      "soLuong": 10
+      "gia_nhap": 90,
+      "gia_ban": 100,
+      "so_luong": 10,
+      "mo_ta": "Abc"
+    },
+    {
+      "id": 5,
+      "ten": "a",
+      "so_luong": "12",
+      "gia_nhap": "12",
+      "gia_ban": "12",
+      "mo_ta": "v"
     }
   ],
   "danhMuc": [
@@ -45,6 +57,18 @@
       "userId": 1,
       "sanPhamId": 1,
       "soLuong": 10
+    }
+  ],
+  "user": [
+    {
+      "id": 1,
+      "userName": "thuyvt66",
+      "password": "12345"
+    },
+    {
+      "id": 2,
+      "userName": "luongnv8",
+      "password": "12345"
     }
   ]
 }

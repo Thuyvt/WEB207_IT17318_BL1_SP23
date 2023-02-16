@@ -31,5 +31,52 @@ app.controller("myCtrl", function ($scope, $http) {
             console.log(e);
         })
     }
+    $scope.viTriHienTai = - 1;
+    $scope.product = {
+        id: "",
+        ten: "",
+        so_luong: "",
+        gia_nhap: "",
+        gia_ban: "",
+        mo_ta: "",
+    }
+    // Phương thức select product cần sửa
+    $scope.selectProduct = function (index) {
+        var id = $scope.products[index].id;
+        $scope.viTriHienTai = index;
+        $http.get(productApi +"/" + id)
+        .then(function (data) {
+            $scope.product = data.data;
+        })
+        .catch(function (e) {
+            console.log(e);
+        });
+    }
 
+    // Phương thức xử lý sự kiện submit
+    $scope.onSubmit = function (event) {
+        // phân biệt nút sửa và thêm
+        if ($scope.viTriHienTai == -1) {
+            // Nút thêm
+            console.log($scope.product);
+            $http.post(productApi, $scope.product)
+            .then(function () {
+                $scope.products.push($scope.product);
+            })
+            .catch(function (e) {
+                consonle.log(e);
+            });
+        } else {
+            // Nút sửa
+            console.log($scope.product);
+            var id = $scope.products[$scope.viTriHienTai].id;
+            $http.put(productApi +"/"+id, $scope.product)
+            .then(function() {
+                $scope.viTriHienTai = -1;
+            })
+            .catch(function (e) {
+                console.log(e);
+            })
+        }
+                                                                                            }
 })
